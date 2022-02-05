@@ -1,0 +1,31 @@
+$background-color: #101628;
+$grey-color: #e3e2e2;
+$pink-color: #fe5541;
+$block-color: #ffd2c8;
+$font: "Roboto", sans-serif;
+$font-headings: "Signika Negative", sans-serif;
+$background-color-dark: #817c7c;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  box-sizing: border-box;
+  color: $background-color;
+}
+
+.nav__list__desktop {
+  display: none;
+}
+
+header {
+  background-color: $grey-color;
+  text-align: center;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.dot {
+  color: $pink-color;
+}

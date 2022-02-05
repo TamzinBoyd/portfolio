@@ -1,0 +1,538 @@
+@import "./_base.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
+
+i:hover {
+  cursor: pointer;
+}
+
+// nav styling //////////////////////////////////////////////////////////////
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mode-toggle {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.mode-toggle > i {
+  color: #fe5541;
+}
+.activate-darkmode {
+  display: none;
+}
+
+.activate-darkmode .dark {
+  display: block;
+}
+
+.logo {
+  margin: 0;
+  padding: 10px;
+  max-height: 4em;
+  display: flex;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Below is creating the 3 lines */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  /* this code creates a white line */
+  display: block;
+  background-color: $background-color;
+
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  /* this will change it to no content so we just have the lines */
+  content: " ";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+/* general nav stayling */
+nav {
+  background-color: $grey-color;
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  padding-right: 20px;
+
+  /* settings so it only appears when select the 3 lines */
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  /* so invisible until check box & they fade in */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+/* below will display the NAV only of the checked box is ticked */
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav__links:hover {
+  color: $pink-color;
+}
+
+// HEADING /////////////////////////////////////////////
+.welcome {
+  padding-top: 200px;
+  font-size: 70px;
+  display: flex;
+
+  &__hi {
+    margin-left: 30px;
+  }
+
+  &__job {
+    margin-left: 35px;
+    font-size: 30px;
+  }
+}
+
+.welcome__info {
+  margin-left: 35px;
+  padding-right: 40px;
+  padding-top: 10px;
+  font-size: 20px;
+  margin-bottom: 250px;
+}
+
+// SUB-HEADINGS ///////////
+
+.subHeading {
+  position: absolute;
+  font-size: 3.6em;
+  font-family: $font;
+  font-weight: 900;
+  margin-left: 30px;
+  margin-top: -40px;
+}
+
+.subContact {
+  margin-top: -60px;
+}
+// PROJECTS /////////////////////////////////////////
+
+.projects {
+  background-color: $block-color;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.projects__container {
+  width: 100%;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.box1,
+.box2,
+.box3 {
+  background-color: $pink-color;
+
+  border-radius: 20px;
+  // height: 100%;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.box1 {
+  margin-top: 60px;
+}
+
+.projects__name {
+  text-align: center;
+}
+.projects__description {
+  text-align: center;
+  justify-content: center;
+}
+
+.projects__links {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.projects__image {
+  justify-content: center;
+  align-items: center;
+}
+
+.projects__image > img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+// // Experience section //////////////////////////////
+
+.experience {
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+.experience-container > i {
+  justify-content: center;
+}
+
+.icon-grid {
+  grid-gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0px 50px 50px 50px;
+  padding-top: 50px;
+}
+
+.icon-grid > i {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.experience-intro {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 30px 30px 0px 30px;
+  text-align: center;
+}
+
+.experience-para {
+  font-size: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+// // Contact section ///////////////////////////////
+
+.contact {
+  background-color: $grey-color;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.me {
+  max-width: 100px;
+  margin-top: 50px;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.icon {
+  padding: 20px 10px 10px 10px;
+  font-size: 30px;
+}
+
+.icon:hover {
+  color: $pink-color;
+}
+
+.contact__para {
+  font-size: 15px;
+
+  padding: 10px 30px 30px 30px;
+  text-align: center;
+}
+
+.contact__intouch {
+  text-align: center;
+  padding: 0px 30px 0px 30px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.contact__para2 {
+  font-size: 15px;
+  margin-top: 40px;
+  padding: 0px 30px 30px 30px;
+  text-align: center;
+}
+
+// // desktop ////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: 568px) {
+  .nav-toggle,
+  .nav-toggle-label {
+    display: none;
+    opacity: 1;
+  }
+
+  .nav__list__desktop {
+    float: right;
+    width: 300px;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -45px;
+    margin-right: 80px;
+  }
+
+  .nav__list__desktop > li {
+    list-style-type: none;
+    font-size: 20px;
+  }
+
+  .nav__links {
+    text-decoration: none;
+    color: $background-color;
+  }
+
+  .nav__links:hover {
+    color: $pink-color;
+  }
+
+  .mode-toggle {
+    margin-right: 2%;
+  }
+
+  //   // welcome section
+
+  .welcome__hi {
+    font-size: 200px;
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+
+  .welcome__dot {
+    margin-top: 130px;
+  }
+
+  .dot {
+    font-size: 150px;
+  }
+  .welcome__job,
+  .welcome__info {
+    margin-left: 110px;
+  }
+
+  //   // projects /////////////////////////
+
+  .subHeading {
+    font-size: 5em;
+    margin-left: 100px;
+    margin-top: -115px;
+  }
+
+  .subContact {
+    margin-top: -130px;
+  }
+
+  .project-cards {
+    // display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 80px;
+  }
+
+  //   //   //  experience ///////////////
+
+  .experience {
+    padding-bottom: 200px;
+  }
+  .icon-grid {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .experience-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+  .experience-intro {
+    grid-column: 1 / 2;
+    font-size: 20px;
+    padding-left: 145px;
+  }
+
+  .experience-para {
+    grid-column: 2/4;
+    font-size: 20px;
+  }
+
+  //   //   // contact section ////////////////////
+
+  .me {
+    margin-left: -45px;
+    margin-top: -70px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  .icon {
+    font-size: 40px;
+    margin: 0 auto;
+  }
+  .contact__links {
+    margin-left: -40px;
+  }
+  .contact__para {
+    font-size: 20px;
+    padding: 0px 100px 50px 100px;
+  }
+  .contact__intouch {
+    font-size: 20px;
+  }
+
+  // // DARK MODE CLASSES /////////////////////////////////////////
+  // body.dark {
+  //   background-color: $background-color;
+  // }
+
+  // .welcome__hi.dark,
+  // .welcome__info.dark {
+  //   color: $grey-color;
+  // }
+
+  // .subHeading.dark {
+  //   color: $block-color;
+  // }
+
+  // .projects__container.dark,
+  // .experience-container.dark {
+  //   background-color: $background-color-dark;
+  // }
+
+  // .skill-icon.dark {
+  //   color: $pink-color;
+  // }
+
+  // .contact.dark {
+  //   background-color: $background-color;
+  // }
+
+  // .contact__para.dark,
+  // .contact__intouch.dark {
+  //   color: $block-color;
+  // }
+
+  // .nav-container.dark {
+  //   background-color: $background-color-dark;
+}
+
+// Modal styling - desktop
+#myBtn:hover {
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: $pink-color;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  color: $background-color;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: $grey-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.portfolio-modal {
+  &.is-open {
+    display: block;
+  }
+}
