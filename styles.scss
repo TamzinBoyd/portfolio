@@ -1,13 +1,17 @@
 @import "./_base.scss";
+@import "./modal.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
 
+* {
+  box-sizing: border-box;
+}
 i:hover {
   cursor: pointer;
 }
 
-// nav styling //////////////////////////////////////////////////////////////
+// nav  //////////////////////////////////////////////////////////////
 
 .nav-container {
   display: flex;
@@ -18,7 +22,7 @@ i:hover {
   display: flex;
   font-size: 30px;
   align-items: center;
-  margin-right: 10%;
+  margin-right: 15%;
 }
 
 .mode-toggle > i {
@@ -36,7 +40,6 @@ i:hover {
   margin: 0;
   padding: 10px;
   max-height: 4em;
-  display: flex;
 }
 
 .nav-toggle {
@@ -46,21 +49,20 @@ i:hover {
 .nav-toggle-label {
   position: absolute;
   top: 0;
-  right: 20%;
+  right: 5%;
   margin-left: 1em;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-/* Below is creating the 3 lines */
+// creating the 3 lines */
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   /* this code creates a white line */
   display: block;
   background-color: $background-color;
-
   height: 3px;
   width: 2em;
   border-radius: 2px;
@@ -81,15 +83,13 @@ i:hover {
   top: 7px;
 }
 
-/* general nav stayling */
+// /* general nav stayling */
 nav {
   background-color: $grey-color;
-  width: 100%;
   position: absolute;
   text-align: right;
   top: 100%;
   right: 0;
-  padding-right: 20px;
 
   /* settings so it only appears when select the 3 lines */
   transform: scale(1, 0);
@@ -98,14 +98,12 @@ nav {
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 15px;
 }
 
 nav li {
   margin-bottom: 1em;
-  margin-left: 1em;
 }
 
 nav a {
@@ -117,7 +115,7 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-/* below will display the NAV only of the checked box is ticked */
+// /* below will display the NAV only of the checked box is ticked */
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
 }
@@ -131,10 +129,10 @@ nav a {
   color: $pink-color;
 }
 
-// HEADING /////////////////////////////////////////////
+// // HEADING /////////////////////////////////////////////
 .welcome {
   padding-top: 200px;
-  font-size: 70px;
+  font-size: 5.5em;
   display: flex;
 
   &__hi {
@@ -143,24 +141,22 @@ nav a {
 
   &__job {
     margin-left: 35px;
-    font-size: 30px;
+    font-size: 1.5em;
   }
 }
 
 .welcome__info {
   margin-left: 35px;
-  padding-right: 40px;
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 1.2em;
   margin-bottom: 250px;
 }
 
-// SUB-HEADINGS ///////////
+// // SUB-HEADINGS ///////////
 
 .subHeading {
   position: absolute;
-  font-size: 3.6em;
-  font-family: $font;
+  font-size: 3.2em;
   font-weight: 900;
   margin-left: 30px;
   margin-top: -40px;
@@ -169,69 +165,53 @@ nav a {
 .subContact {
   margin-top: -60px;
 }
-// PROJECTS /////////////////////////////////////////
+// // PROJECTS /////////////////////////////////////////
 
 .projects {
   background-color: $block-color;
-  width: 100%;
   padding-bottom: 100px;
 }
 
-.projects__container {
-  width: 100%;
-}
-
-.project-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-  justify-items: center;
-  align-items: center;
-}
-.box1,
-.box2,
-.box3 {
-  background-color: $pink-color;
-
-  border-radius: 20px;
-  // height: 100%;
-  width: 80%;
-  padding: 20px;
+.portfolio-items {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
-}
-
-.box1 {
-  margin-top: 60px;
-}
-
-.projects__name {
-  text-align: center;
-}
-.projects__description {
-  text-align: center;
-  justify-content: center;
-}
-
-.projects__links {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.projects__image {
-  justify-content: center;
   align-items: center;
+  padding-top: 60px;
 }
 
-.projects__image > img {
-  border-radius: 20px;
-  width: 100%;
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-// // Experience section //////////////////////////////
+.project-image {
+  max-height: 400px;
+}
+
+.project-title {
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+.modal-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  color: $pink-color;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.modal__description {
+  margin-top: 10px;
+}
+
+//  Experience section //////////////////////////////
 
 .experience {
   background-color: white;
@@ -261,25 +241,51 @@ nav a {
 
 .experience-intro {
   font-weight: 700;
-  font-size: 20px;
-  padding: 30px 30px 0px 30px;
+  font-size: 1.2em;
+  padding: 15px;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 
 .experience-para {
-  font-size: 15px;
-  padding: 30px;
+  font-size: 1em;
+  padding: 15px;
   text-align: center;
 }
 
-// // Contact section ///////////////////////////////
+// // // Contact section ///////////////////////////////
 
 .contact {
   background-color: $grey-color;
   margin-top: -20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+  }
+
+  &__info {
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 30px;
+  }
+
+  &__intouch {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 10px;
+  }
+
+  &__para {
+    padding: 10px 10px;
+  }
 }
 
 .me {
@@ -287,44 +293,16 @@ nav a {
   margin-top: 50px;
 }
 
-.contact__links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
-
 .icon {
-  padding: 20px 10px 10px 10px;
-  font-size: 30px;
+  font-size: 1.9em;
+  padding: 5px;
 }
 
 .icon:hover {
   color: $pink-color;
 }
 
-.contact__para {
-  font-size: 15px;
-
-  padding: 10px 30px 30px 30px;
-  text-align: center;
-}
-
-.contact__intouch {
-  text-align: center;
-  padding: 0px 30px 0px 30px;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.contact__para2 {
-  font-size: 15px;
-  margin-top: 40px;
-  padding: 0px 30px 30px 30px;
-  text-align: center;
-}
-
-// // desktop ////////////////////////////////////////////////////////////////////////////////////////////////
+// // // desktop ////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (min-width: 568px) {
   .nav-toggle,
@@ -362,7 +340,7 @@ nav a {
     margin-right: 2%;
   }
 
-  //   // welcome section
+  //   // welcome section ////////////////
 
   .welcome__hi {
     font-size: 200px;
@@ -394,15 +372,23 @@ nav a {
     margin-top: -130px;
   }
 
-  .project-cards {
-    // display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    padding: 80px;
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding-top: 60px;
   }
 
-  //   //   //  experience ///////////////
+  .portfolio-item {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .project-image {
+    height: 500px;
+    width: 250px;
+  }
+  //   //  experience ///////////////
 
   .experience {
     padding-bottom: 200px;
@@ -431,7 +417,7 @@ nav a {
     font-size: 20px;
   }
 
-  //   //   // contact section ////////////////////
+  //   //// contact section ////////////////////
 
   .me {
     margin-left: -45px;
@@ -454,85 +440,23 @@ nav a {
   .contact__intouch {
     font-size: 20px;
   }
-
-  // // DARK MODE CLASSES /////////////////////////////////////////
-  // body.dark {
-  //   background-color: $background-color;
-  // }
-
-  // .welcome__hi.dark,
-  // .welcome__info.dark {
-  //   color: $grey-color;
-  // }
-
-  // .subHeading.dark {
-  //   color: $block-color;
-  // }
-
-  // .projects__container.dark,
-  // .experience-container.dark {
-  //   background-color: $background-color-dark;
-  // }
-
-  // .skill-icon.dark {
-  //   color: $pink-color;
-  // }
-
-  // .contact.dark {
-  //   background-color: $background-color;
-  // }
-
-  // .contact__para.dark,
-  // .contact__intouch.dark {
-  //   color: $block-color;
-  // }
-
-  // .nav-container.dark {
-  //   background-color: $background-color-dark;
 }
 
-// Modal styling - desktop
-#myBtn:hover {
-  cursor: pointer;
-}
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+// animation for modal
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: $pink-color;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 20px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
-
-.close {
-  color: $background-color;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: $grey-color;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.portfolio-modal {
-  &.is-open {
-    display: block;
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

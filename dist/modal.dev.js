@@ -1,34 +1,41 @@
 "use strict";
 
-// Modals
 var portfolioContainer = document.querySelector(".portfolio-items");
 portfolioContainer.addEventListener("click", function (e) {
-  var modalToggle = e.target.closest(".portfolio-link");
-  console.log(modalToggle); // if clicking anywhere else, do nothing
+  e.preventDefault(); // saving target of the click, and take the closest link to the click
 
-  if (!modalToggle) return;
-  var modal = modalToggle.parentNode.nextElementSibling; //   only select close button that is inside of the selected modal
+  var modalToggle = e.target.closest(".modal-link"); // if they click on something that isn't a link then don't run the rest
 
-  var closeButton = modal.querySelector(".modal-close");
-  modal.classList.add("is-open");
-  closeButton.addEventListener("click", function (_) {
-    modal.classList.remove("is-open");
+  if (!modalToggle) return; // if there is a button then select the right modal (skip to parent then to sibling)
+
+  var modal = modalToggle.parentNode.nextElementSibling; // find the button within the chosen modal, instead of document
+
+  var closeButton = modal.querySelector(".close-modal"); // open modal
+
+  var modalOpen = function modalOpen() {
+    modal.classList.add("is-open"); // on this modal, create a style animation, use the pre-labelled modalFade from SCSS file, then specify time frame & direction
+
+    modal.style.animation = "modalIn 500ms forwards";
+  }; // hide modal on pressing close button
+
+
+  var modalClose = function modalClose() {
+    modal.classList.remove("is-open"); // remove event listener so it can be re-opened again
+
+    modal.removeEventListener("animationend", modalClose);
+  };
+
+  closeButton.addEventListener("click", function () {
+    modal.style.animation = "modalOut 500ms forwards"; // when the animation above ends it will fun the function
+
+    modal.addEventListener("animationend", modalClose);
+  }); // when user presses esc they can close the modal
+
+  document.addEventListener("keydown", function (e) {
+    if (e.keycode = 27) {
+      modal.style.animation = "modalOut 500ms forwards";
+      modal.addEventListener("animationend", modalClose);
+    }
   });
-}); // const modal = document.querySelector("#myModal");
-// const btn = document.getElementById("myBtn");
-// const span = document.getElementsByClassName("close")[0];
-// // open the modal
-// btn.onclick = handleOpenClick = () => {
-//   modal.classList.add = "showModal";
-//   modal.style.display = "block";
-// };
-// // close the modal
-// span.onclick = handleCloseClick = () => {
-//   modal.style.display = "none";
-// };
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = handleExitClick = (event) => {
-//   if (event.target === modal) {
-//     modal.style.display = "none";
-//   }
-// };
+  modalOpen();
+});

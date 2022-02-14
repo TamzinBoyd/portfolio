@@ -10,6 +10,7 @@
     ></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" type="./images/logo.png" href="favicon.ico" />
+  
     <title>Tamzin Boyd</title>
   </head>
   <header>
@@ -64,72 +65,257 @@
           PROJECTS<span class="dot">.</span>
         </h2>
 
-        <!-- project images -->
 
-        <div class="projects__container">
-          <div class="project-cards">
-            <a class="projects__image">
-              <img src="images/project1.png" alt="project" id="myBtn" />
-            </a>
-            <a class="projects__image">
-              <img src="images/project1.png" alt="project" id="myBtn" />
-            </a>
-            <a class="projects__image">
-              <img src="images/project1.png" alt="project" id="myBtn" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <!-- PROJECT IMAGES ------------------------------------>
+      <div class="portfolio-items">
+        <!-- PROJECT 1 -->
+        <figure class="portfolio-item">
+          <img
+            src="images/snakeGame.png"
+            alt="project image"
+            class="project-image"
+          />
+          <figcaption>
+            <h2 class="project-title">Snake Memory Game</h2>
+               <a href="#" class="modal-link">More info</a>
+          </figcaption>
 
-      <!-- Project modals -->
-      <div id="myModal" class="modal" href="#">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal1">
-            <h3 class="projects__name">Hidden Object Game</h3>
-            <p class="projects__description">
-              Sed ut perspiciatis unde omnis iste natus error sit
-              <span class="bold white">voluptatem accusantium</span> doloremque
-              laudantium. Sed ut perspiciatis unde omnis iste natus error sit
-              voluptatem accusantium doloremque laudantium.
-            </p>
-            <div class="projects__links">
-              <a href="https://google.com" target="_blank" class="github">
-                <i class="fab fa-github-square"></i>
-              </a>
+          <!-- modal 1 ----------------------------------->
+          <div class="portfolio-modal">
+            <button class="close-modal">
+              <h1>X</h1>
+            </button>
+            <div class="portfolio-header">
+              <div class="portfolio-title-box">
+                <h2 class="project-title">Snake Memory Game</h2>
+                <p class="portfolio-subtitle">HTML, CSS, Javscript</p>
+              </div>
             </div>
-
-            <a href="https://placeholder.com" class="project__image">
-              <img src="https://via.placeholder.com/250x200" alt="project" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="modal1">
-            <h3 class="projects__name">Hidden Object Game</h3>
-            <p class="projects__description">
-              Sed ut perspiciatis unde omnis iste natus error sit
-              <span class="bold white">voluptatem accusantium</span> doloremque
-              laudantium. Sed ut perspiciatis unde omnis iste natus error sit
-              voluptatem accusantium doloremque laudantium.
-            </p>
-            <div class="projects__links">
-              <a href="https://google.com" target="_blank" class="github">
-                <i class="fab fa-github-square"></i>
-              </a>
+            <div class="portfolio-content">
+              <p>
+                This was my first main project on the course, I was given the brief to create an interactive game utilising vanilla Javascript.
+              </p>
+             <video width="280" controls>
+              <source src="./images/snakeGameVideo.mp4" type="video/mp4">
+              <source src="mov_bbb.ogg" type="video/ogg">
+              Your browser does not support HTML video.
+            </video>
+            <p class="modal__description">
+              I opted to create a children's memory game full of colourful characters. The user has 2 minutes to find all 6 snakes. If I were to improve the game I'd have different levels of difficulty which alter the timer limit and also a HTML generated alert rather than JS alert.
+              </p>
+              <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Game-Project"></a>
             </div>
-            <a href="https://placeholder.com" class="project__image">
-              <img src="https://via.placeholder.com/250x200" alt="project" />
-            </a>
           </div>
-        </div>
+        </figure>
+
+        <!-- PROJECT 2 -->
+        <figure class="portfolio-item">
+          <img
+          src="images/morseCode.png"
+            alt="project image"
+            class="project-image"
+          />
+          <figcaption>
+            <h2 class="project-title">Morse Code Translator</h2>
+                      <a href="#" class="modal-link">More info</a>
+          </figcaption>
+
+          <!-- modal 2 -->
+          <div class="portfolio-modal">
+            <button class="close-modal">
+              <h1>X</h1>
+            </button>
+            <div class="portfolio-header">
+              <div class="portfolio-title-box">
+                <h2 class="project-title">Morse Code</h2>
+                <p class="portfolio-subtitle">HTML, CSS, OOP Javascript </p>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <p>
+               Create a morse code translator using OOP, designed mobile first.
+              </p>
+              <video width="280" controls>
+                <source src="./images/morseCodeVideo.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+              </video>
+              <p class="modal__description">
+               This was a challenging task, I had to consider the morse to English input would be different as each "letter" contained multiple characters. 
+              </p>
+              <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"></a>
+            </div>
+          </div>
+        </figure>
+        <!--  -->
+
+        <!-- PROJECT 3 -->
+        <figure class="portfolio-item">
+          <img
+          src="images/alienGame.png"
+            alt="project image"
+            class="project-image"
+          />
+          <figcaption>
+            <h2 class="project-title">Alien Shooting Game</h2>
+                      <a href="#" class="modal-link">More info</a>
+          </figcaption>
+
+          <!-- modal 2 -->
+          <div class="portfolio-modal">
+            <button class="close-modal">
+              <h1>X</h1>
+            </button>
+            <div class="portfolio-header">
+              <div class="portfolio-title-box">
+                <h2 class="project-title">Alien Shooting Game</h2>
+                <p class="portfolio-subtitle">HTML, CSS, OOP Javascript </p>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <p>
+               Create a text based, basic shooting game.
+              </p>
+              <video width="280" controls>
+                <source src="./images/alienGameVideo.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+              </video>
+              <p class="modal__description">
+              In this game the aim was to have several ships with  set points. On button click a random ship is "shot" and points deducted. Once a ship is sunk it has a hidden class applied to it. Game over is triggered when the mother ship or all ships reach 0 points.  
+              </p>
+              <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"></a>
+            </div>
+          </div>
+        </figure>
+        <!--  -->
+
+         <!-- PROJECT 4 -->
+         <figure class="portfolio-item">
+          <img
+          src="images/calculator.png"
+            alt="project image"
+            class="project-image"
+          />
+          <figcaption>
+            <h2 class="project-title">Calculator</h2>
+                <a href="#" class="modal-link">More info</a>
+          </figcaption>
+
+          <!-- modal  -->
+          <div class="portfolio-modal">
+            <button class="close-modal">
+              <h1>X</h1>
+            </button>
+            <div class="portfolio-header">
+              <div class="portfolio-title-box">
+                <h2 class="project-title">Calculator</h2>
+                <p class="portfolio-subtitle">HTML, CSS, Javascript </p>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <p>
+               Create a functional calculator.
+              </p>
+              <video width="280" controls>
+                <source src="./images/calculatorVideo.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+              </video>
+              <p class="modal__description">
+               I decided to store the numbers in an array which I looped over to add event listeners. On the click of a button the number is stored and displayed to the user. Using substring I was able to break down the user's input, calculate the sum and return a total value.
+              </p>
+              <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"></a>
+            </div>
+          </div>
+        </figure>
+        <!--  -->
+
+ <!-- PROJECT 5 -->
+ <figure class="portfolio-item">
+  <img
+  src="images/pokedex.png"
+    alt="project image"
+    class="project-image"
+  />
+  <figcaption>
+    <h2 class="project-title">Pokemon Generator</h2>
+              <a href="#" class="modal-link">More info</a>
+  </figcaption>
+
+  <!-- modal  -->
+  <div class="portfolio-modal">
+    <button class="close-modal">
+      <h1>X</h1>
+    </button>
+    <div class="portfolio-header">
+      <div class="portfolio-title-box">
+        <h2 class="project-title">Pokemon Generator</h2>
+        <p class="portfolio-subtitle">HTML, CSS, Javascript, API fetch </p>
       </div>
+    </div>
+    <div class="portfolio-content">
+      <p>
+       Personal project to generate a random Pokemon.
+      </p>
+      <video width="280" controls>
+        <source src="./images/pokedexVideo.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+      <p class="modal__description">
+       Having learnt about API fetch requests I wanted to utilise these skills to access the public Pokemon API. This meant reading the documentation carefully to determine how to access the values. On each click an API detch it made which returns a random Pokemon and their key statistics. (Having now learnt more I would instead make just one initial API request then manipulate the data locally).
+      </p>
+      <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"></a>
+    </div>
+  </div>
+</figure>
+<!--  -->
+
+ <!-- PROJECT 6 -->
+ <figure class="portfolio-item">
+  <img
+  src="images/hangman.png"
+    alt="project image"
+    class="project-image"
+  />
+  <figcaption>
+    <h2 class="project-title">Hangman Game</h2>
+              <a href="#" class="modal-link">More info</a>
+  </figcaption>
+
+  <!-- modal  -->
+  <div class="portfolio-modal">
+    <button class="close-modal">
+      <h1>X</h1>
+    </button>
+    <div class="portfolio-header">
+      <div class="portfolio-title-box">
+        <h2 class="project-title">Hangman</h2>
+        <p class="portfolio-subtitle">HTML, CSS, Javascript </p>
+      </div>
+    </div>
+    <div class="portfolio-content">
+      <p>
+       Personal project to replicate the popular Hangman game.
+      </p>
+      <video width="280" controls>
+        <source src="./images/hangmanVideo.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+      <p class="modal__description">
+       A fun side project to practise Javascript skills learnt to date. Used CSS to generate the drawn lines when user guesses incorrectly. Generate an array of "_" to represent the random word. For loop to access the 2 arrays. Use a hidden score to track user's progress and show when they lose. Game is won when array no longer contains any "_".
+      </p>
+      <a class="fab fa-github-square icon skill-icon" href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"></a>
+    </div>
+  </div>
+</figure>
+<!--  -->
+
+      </div>
+    </div>
+
 
       <!-- experience section ////////////////////////////////////////////// -->
       <h2 class="subHeading subExperience">
@@ -186,6 +372,7 @@
             href="https://github.com/TamzinBoyd"
           ></i>
         </div>
+        <div class="contact__info">
         <p class="contact__para">
           I’m a software developer working near to xxxx. When I’m not stuck with
           my head in a latop I enjoy horse riding, design and walking. If you
@@ -201,59 +388,10 @@
           suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
         </p>
       </div>
+   
 
-      <section class="portfolio" id="portfolio">
-        <h1>my work</h1>
-        <div class="portfolio-items">
-          <figure class="portfolio-item">
-            <img class="portfolio-image" src="images/project1.png" />
-            <figcaption>
-              <h2 class="portfolio-title">project name</h2>
-              <a href="#" class="portfolio-link">more info</a>
-            </figcaption>
+   
 
-            <div class="portfolio-modal">
-              <div class="portfolio-header">
-                <button class="modal-close">
-                  <span class="close">&times;</span>
-                </button>
-                <div class="portfolio-title-box"></div>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Temporibus sed ipsam architecto in, nobis similique doloremque
-                cupiditate? Velit, provident molestias.
-              </p>
-            </div>
-          </figure>
-
-          <figure class="portfolio-item">
-            <img class="portfolio-image" src="images/project1.png" />
-            <figcaption>
-              <h2 class="portfolio-title">project name</h2>
-              <a href="#" class="portfolio-link">more info</a>
-            </figcaption>
-
-            <div class="portfolio-modal">
-              <div class="portfolio-header">
-                <button class="modal-close">
-                  <span class="close">&times;</span>
-                </button>
-                <div class="portfolio-title-box"></div>
-              </div>
-            </div>
-            <div class="portfolio-content">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Temporibus sed ipsam architecto in, nobis similique doloremque
-                cupiditate? Velit, provident molestias.
-              </p>
-            </div>
-          </figure>
-        </div>
-      </section>
       <script src="script.js"></script>
       <script src="modal.js"></script>
     </main>
