@@ -10,6 +10,9 @@
 i:hover {
   cursor: pointer;
 }
+.light-text {
+  color: $grey-color;
+}
 
 // nav  //////////////////////////////////////////////////////////////
 
@@ -67,11 +70,12 @@ i:hover {
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  /* this will change it to no content so we just have the lines */
+  /* this will change it to no content so just have the lines */
   content: " ";
   position: absolute;
 }
 
+// reates top & bottom lines
 .nav-toggle-label span::before {
   bottom: 7px;
 }
@@ -208,6 +212,12 @@ nav a {
   margin-top: 10px;
 }
 
+.portfolio-modal {
+  padding: 20px 20px;
+  background-color: $background-color;
+  color: white;
+}
+
 //  Experience section //////////////////////////////
 
 .experience {
@@ -302,6 +312,7 @@ nav a {
 // // // desktop ////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media screen and (min-width: 568px) {
+  // hide hamburger menu
   .nav-toggle,
   .nav-toggle-label {
     display: none;
@@ -314,7 +325,7 @@ nav a {
     color: $background-color;
   }
 
-  .nav__list__desktop {
+  .desktop-titles {
     float: right;
     width: 300px;
     display: block;
@@ -325,7 +336,7 @@ nav a {
     margin-right: 80px;
   }
 
-  .nav__list__desktop > li {
+  .desktop-titles > li {
     list-style-type: none;
     font-size: 20px;
   }
@@ -395,6 +406,20 @@ nav a {
   .portfolio-title {
     padding-top: 20px;
   }
+
+  .project-title {
+    padding: 20px 0px;
+    font-size: 1.8em;
+  }
+
+  .portfolio-modal {
+    padding: 20px 180px;
+    background-color: $background-color;
+  }
+
+  .portfolio-content > video {
+    padding: 30px 0px;
+  }
   //   //  experience ///////////////
 
   .experience {
@@ -446,24 +471,5 @@ nav a {
   }
   .contact__intouch {
     font-size: 20px;
-  }
-}
-
-// animation for modal
-@keyframes modalIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes modalOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

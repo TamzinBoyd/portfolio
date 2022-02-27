@@ -34,7 +34,8 @@ header {
 }
 
 .main.dark,
-.experience.dark {
+.experience.dark,
+.modal.dark {
   background-color: #101628;
 }
 
@@ -48,5 +49,9 @@ header {
 }
 
 .subHeading.dark {
+  color: #ffd2c8;
+}
+
+.nav__links.dark {
   color: #ffd2c8;
 }
