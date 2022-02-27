@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  color: #101628;
+}
+
+.nav__list__desktop {
+  display: none;
+}
+
+header {
+  background-color: #e3e2e2;
+  text-align: center;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.dot {
+  color: #fe5541;
+}
+
+.nav-container.dark,
+.nav.dark {
+  background-color: #242323;
+}
+
+#theme-toggler.dark,
+.contact-icon.dark,
+.bold.dark {
+  color: #fe5541;
+}
+
+.main.dark,
+.experience.dark {
+  background-color: #101628;
+}
+
+.text-dark-mode.dark {
+  color: white;
+}
+
+.projects.dark,
+.contact.dark {
+  background-color: #242323;
+}
+
+.subHeading.dark {
+  color: #ffd2c8;
+}

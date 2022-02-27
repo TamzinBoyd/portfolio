@@ -36,25 +36,13 @@ i:hover {
 .nav-container {
   display: flex;
   justify-content: space-between;
-}
-
-.mode-toggle {
-  display: flex;
-  font-size: 30px;
   align-items: center;
-  margin-right: 15%;
 }
 
-.mode-toggle > i {
-  color: #fe5541;
-}
-
-.activate-darkmode {
-  display: none;
-}
-
-.activate-darkmode .dark {
-  display: block;
+#theme-toggler {
+  margin-right: 17%;
+  font-size: 1.4em;
+  color: #101628;
 }
 
 .logo {
@@ -80,13 +68,18 @@ i:hover {
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  /* this code creates a white line */
   display: block;
   background-color: #101628;
   height: 3px;
   width: 2em;
   border-radius: 2px;
   position: relative;
+}
+
+.nav-toggle-label.dark span,
+.nav-toggle-label.dark span::before,
+.nav-toggle-label.dark span::after {
+  background-color: #fe5541;
 }
 
 .nav-toggle-label span::before,
@@ -311,6 +304,12 @@ nav a {
 .nav-toggle-label {
     display: none;
     opacity: 1;
+  }
+
+  #theme-toggler {
+    margin-right: 2%;
+    font-size: 1.4em;
+    color: #101628;
   }
 
   .nav__list__desktop {

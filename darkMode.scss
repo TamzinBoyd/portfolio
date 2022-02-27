@@ -1,34 +1,31 @@
-//   // // DARK MODE CLASSES /////////////////////////////////////////
-//   // body.dark {
-//   //   background-color: $background-color;
-//   // }
+@import "./_base.scss";
 
-//   // .welcome__hi.dark,
-//   // .welcome__info.dark {
-//   //   color: $grey-color;
-//   // }
+.nav-container.dark,
+.nav.dark {
+  background-color: $background-color-dark;
+}
 
-//   // .subHeading.dark {
-//   //   color: $block-color;
-//   // }
+#theme-toggler.dark,
+.contact-icon.dark,
+.bold.dark {
+  color: $pink-color;
+}
+.main.dark,
+.experience.dark {
+  background-color: $background-color;
+}
 
-//   // .projects__container.dark,
-//   // .experience-container.dark {
-//   //   background-color: $background-color-dark;
-//   // }
+.text-dark-mode.dark {
+  color: white;
+}
 
-//   // .skill-icon.dark {
-//   //   color: $pink-color;
-//   // }
+.projects.dark,
+.contact.dark {
+  background-color: $background-color-dark;
+}
 
-//   // .contact.dark {
-//   //   background-color: $background-color;
-//   // }
+.subHeading.dark {
+  color: $block-color;
+}
 
-//   // .contact__para.dark,
-//   // .contact__intouch.dark {
-//   //   color: $block-color;
-//   // }
-
-//   // .nav-container.dark {
-//   //   background-color: $background-color-dark;
+// hamburger menu is on the main CSS
