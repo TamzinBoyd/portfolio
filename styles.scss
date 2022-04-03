@@ -27,7 +27,7 @@ i:hover {
 }
 
 #theme-toggler {
-  margin-right: 17%;
+  margin-right: 20%;
   font-size: 1.4em;
   color: $background-color;
 }
@@ -39,15 +39,22 @@ i:hover {
 }
 
 // Hamburger menu
+// hide checklist box
 .nav-toggle {
   display: none;
 }
 
+.desktop-titles {
+  // hide desktop links
+  display: none;
+}
+
 .nav-toggle-label {
+  // position of hambuger
   position: absolute;
   top: 0;
-  right: 5%;
-  margin-left: 1em;
+  right: 0;
+  margin-right: 5%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -88,15 +95,15 @@ i:hover {
   top: 7px;
 }
 
-// /* general nav stayling */
 nav {
+  // pop out list styling
   background-color: $grey-color;
   position: absolute;
   text-align: right;
   top: 100%;
   right: 0;
 
-  /* settings so it only appears when select the 3 lines */
+  // /* settings so it only appears when select the 3 lines */
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -108,19 +115,20 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 nav a {
+  // further stylijng to links
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
-  /* so invisible until check box & they fade in */
+  // /* so invisible until check box & they fade in */
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
-// /* below will display the NAV only of the checked box is ticked */
+/* below will display the NAV only of the checked box is ticked */
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
 }

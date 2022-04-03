@@ -52,7 +52,7 @@ i:hover {
 }
 
 #theme-toggler {
-  margin-right: 17%;
+  margin-right: 20%;
   font-size: 1.4em;
   color: #101628;
 }
@@ -67,11 +67,15 @@ i:hover {
   display: none;
 }
 
+.desktop-titles {
+  display: none;
+}
+
 .nav-toggle-label {
   position: absolute;
   top: 0;
-  right: 5%;
-  margin-left: 1em;
+  right: 0;
+  margin-right: 5%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -115,7 +119,6 @@ nav {
   text-align: right;
   top: 100%;
   right: 0;
-  /* settings so it only appears when select the 3 lines */
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -127,18 +130,18 @@ nav ul {
 }
 
 nav li {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 nav a {
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
-  /* so invisible until check box & they fade in */
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
+/* below will display the NAV only of the checked box is ticked */
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
 }
