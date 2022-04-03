@@ -25,6 +25,10 @@ header {
   color: #fe5541;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -35,6 +39,10 @@ i:hover {
 
 .light-text {
   color: #e3e2e2;
+}
+
+.bold {
+  color: #fe5541;
 }
 
 .nav-container {
@@ -179,6 +187,14 @@ nav a {
 .projects {
   background-color: #ffd2c8;
   padding-bottom: 100px;
+}
+
+.projects__description {
+  padding: 70px 20px 20px 20px;
+}
+
+.projects__description2 {
+  padding: 10px 20px 0px 20px;
 }
 
 .portfolio-items {

@@ -14,6 +14,10 @@ i:hover {
   color: $grey-color;
 }
 
+.bold {
+  color: $pink-color;
+}
+
 // nav  //////////////////////////////////////////////////////////////
 
 .nav-container {
@@ -171,6 +175,14 @@ nav a {
 .projects {
   background-color: $block-color;
   padding-bottom: 100px;
+}
+
+.projects__description {
+  padding: 70px 20px 20px 20px;
+}
+
+.projects__description2 {
+  padding: 10px 20px 0px 20px;
 }
 
 .portfolio-items {

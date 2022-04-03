@@ -21,3 +21,7 @@ header {
 .dot {
   color: #fe5541;
 }
+
+html {
+  scroll-behavior: smooth;
+}
