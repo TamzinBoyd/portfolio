@@ -22,6 +22,10 @@ header {
   color: #fe5541;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-container.dark,
 .nav.dark {
   background-color: #242323;
@@ -40,7 +44,7 @@ header {
 }
 
 .text-dark-mode.dark {
-  color: white;
+  color: #e3e2e2;
 }
 
 .projects.dark,
@@ -49,9 +53,9 @@ header {
 }
 
 .subHeading.dark {
-  color: #ffd2c8;
+  color: #e3e2e2;
 }
 
 .nav__links.dark {
-  color: #ffd2c8;
+  color: #e3e2e2;
 }

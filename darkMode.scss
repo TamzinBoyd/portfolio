@@ -17,7 +17,7 @@
 }
 
 .text-dark-mode.dark {
-  color: white;
+  color: $grey-color;
 }
 
 .projects.dark,
@@ -26,10 +26,10 @@
 }
 
 .subHeading.dark {
-  color: $block-color;
+  color: $grey-color;
 }
 
 // hamburger menu is on the main CSS
 .nav__links.dark {
-  color: $block-color;
+  color: $grey-color;
 }
