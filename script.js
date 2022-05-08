@@ -27,6 +27,7 @@ toggle.addEventListener("click", () => {
   for (let i = 0; i < contactPara.length; i++) {
     contactPara[i].classList.add("dark");
   }
+
   contactBold.classList.add("dark");
   navBar.classList.add("dark");
 });

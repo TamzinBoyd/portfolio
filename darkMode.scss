@@ -33,3 +33,11 @@
 .nav__links.dark {
   color: $grey-color;
 }
+
+.nav__links.dark:hover {
+  color: $pink-color;
+}
+
+.mobile-list.dark:hover {
+  color: $pink-color;
+}

@@ -59,3 +59,11 @@ html {
 .nav__links.dark {
   color: #e3e2e2;
 }
+
+.nav__links.dark:hover {
+  color: #fe5541;
+}
+
+.mobile-list.dark:hover {
+  color: #fe5541;
+}

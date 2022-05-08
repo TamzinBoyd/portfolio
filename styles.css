@@ -63,7 +63,7 @@ i:hover {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #e3e2e2;
+  background: #101628;
 }
 
 .nav-container {
@@ -143,6 +143,7 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  overflow-x: hidden;
 }
 
 nav ul {
@@ -170,10 +171,6 @@ nav a {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
-}
-
-.nav__links:hover {
-  color: #fe5541;
 }
 
 .welcome {
@@ -243,12 +240,6 @@ nav a {
   text-align: center;
 }
 
-.modal-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .button {
   width: 55%;
   height: 40px;
@@ -268,20 +259,8 @@ nav a {
   text-decoration: none;
 }
 
-.modal-link:hover {
-  color: #fe5541;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.modal__description {
-  margin-top: 10px;
-}
-
-.portfolio-modal {
-  padding: 20px 20px;
-  background-color: #101628;
-  color: white;
+figcaption {
+  display: flex;
 }
 
 .experience {
@@ -389,10 +368,13 @@ nav a {
     color: #101628;
   }
 
+  header {
+    overflow-y: hidden;
+  }
+
   .desktop-titles {
     float: right;
     width: 300px;
-    display: block;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -471,14 +453,13 @@ nav a {
   }
 
   .portfolio-item {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     align-items: center;
   }
 
   .project-image {
-    height: 500px;
-    width: 230px;
+    width: 210px;
   }
 
   .portfolio-title {
@@ -488,11 +469,6 @@ nav a {
   .project-title {
     padding: 20px 0px;
     font-size: 1.5em;
-  }
-
-  .portfolio-modal {
-    padding: 20px 180px;
-    background-color: #101628;
   }
 
   .portfolio-content {
@@ -543,7 +519,7 @@ nav a {
   }
 
   .experience-intro__para3 {
-    padding: 0 90px 0 90px;
+    padding: 30px 90px 0 90px;
     font-weight: 400;
     font-size: 1.1em;
   }
@@ -565,11 +541,17 @@ nav a {
   }
 
   .contact__para {
-    font-size: 20px;
+    font-size: 1.1em;
     padding: 0px 100px 50px 100px;
   }
 
   .contact__intouch {
-    font-size: 20px;
+    font-size: 1.1em;
+    padding-bottom: 20px;
+  }
+
+  .button {
+    font-size: 1.1em;
+    width: 150px;
   }
 }

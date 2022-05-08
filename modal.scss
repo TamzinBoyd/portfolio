@@ -1,10 +1,20 @@
 @import "./base";
 
+.modal-link:hover {
+  color: $pink-color;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.modal__description {
+  margin-top: 10px;
+}
+
 .portfolio-modal {
   display: none;
   position: fixed;
   z-index: 10;
-  background: white;
+  background: $background-color;
   top: 2em;
   bottom: 2em;
   left: 2em;
@@ -39,8 +49,8 @@
   background: $pink-color;
   cursor: pointer;
   position: fixed;
-  right: 2.7em;
-  top: 2.7em;
+  right: 2.9em;
+  top: 2.9em;
   width: 2em;
   height: 2em;
   border-radius: 50%;
@@ -70,5 +80,15 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .portfolio-modal {
+    padding: 30px 100px 30px 100px;
+  }
+
+  video {
+    min-width: 500px;
   }
 }
