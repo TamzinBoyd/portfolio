@@ -11,7 +11,7 @@ const projectMain = document.querySelector(".projects");
 const modal = document.querySelector(".portfolio-modal");
 
 const experienceMain = document.querySelector(".experience");
-const contactMain = document.querySelector(".contact");
+const contactMain = document.querySelector(".contact-container");
 const contactIcon = document.querySelectorAll(".contact-icon");
 const boldText = document.querySelectorAll(".bold");
 const toggleBtn = document.querySelector("#theme-toggler");
