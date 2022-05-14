@@ -19,7 +19,7 @@
     <div class="nav-container">
       <img src="./images/logo.png" class="logo" alt="logo" />
 
-      <i class="far fa-solid fa-moon" id="theme-toggler"></i>
+      <i class="far fa-solid fa-moon mode-toggle" id="theme-toggler"></i>
     </div>
 
     <!-- mobile nav list -->
@@ -129,17 +129,77 @@
                   Your browser does not support HTML video.
                 </video>
 
-                <p class="modal__description light-text"></p>
+                <a
+                  class="fab fa-github-square icon skill-icon light-text code-link"
+                  href="https://github.com/TamzinBoyd/punkAPI"
+                  >Check out the code</a
+                >
+              </div>
+            </div>
+          </figure>
+
+          <!-- project -->
+          <figure class="portfolio-item">
+            <h2 class="project-title">Client Project</h2>
+            <img
+              src="images/clientProject.png"
+              alt="project image"
+              class="project-image"
+            />
+            <figcaption>
+              <button class="modal-link text-dark-mode button">
+                <a href="#" class="more-info">More info</a>
+              </button>
+            </figcaption>
+
+            <div class="portfolio-modal">
+              <button class="close-modal">
+                <h1>X</h1>
+              </button>
+              <div class="portfolio-header">
+                <div class="portfolio-title-box">
+                  <h2 class="project-title">Client Project</h2>
+                  <p class="portfolio-subtitle light-text">
+                    React JS (useState, Router, useForm, Firestore)
+                  </p>
+                </div>
+              </div>
+              <div class="portfolio-content">
+                <p class="light-text">
+                  Live client project web application in React where I was given
+                  a ticket to created a staged form for the user to enter a
+                  recipe. This included image upload, form validation and a
+                  preview screen. I stored the input from the user in state then
+                  on validating the data when the user clicks "confirm" the data
+                  is submitted to Firestore. This data will then be accessed in
+                  other areas of the application. As the project was already
+                  underway this was a great opportunity to read and understand
+                  existing code, making sure any code I created integrated
+                  correctly with the existing application. We were given designs
+                  in Figma and tickets allocated in Trello. We then used GitHub
+                  for the shared code, checking for conflicts using pull
+                  requests. This gave me understanding of Agile working and I
+                  would meet regularly with a coach to talk through my code.
+                </p>
+                <video width="280" controls>
+                  <source src="./images/clientProject.mp4" type="video/mp4" />
+                  <source src="mov_bbb.ogg" type="video/ogg" />
+                  Your browser does not support HTML video.
+                </video>
+
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
+                  <!--
                   href="https://github.com/TamzinBoyd/punkAPI"
-                ></a>
+                  --
+                >
+                </a>
               </div>
             </div>
           </figure>
 
           <!--project-->
-          <figure class="portfolio-item">
+          <!-- <figure class="portfolio-item">
             <h2 class="project-title">Quiz</h2>
             <img
               src="images/punkAPI.png"
@@ -150,10 +210,10 @@
               <button class="modal-link text-dark-mode button">
                 <a href="#" class="more-info">More info</a>
               </button>
-            </figcaption>
+            </figcaption> -->
 
             <!-- modal 1 ----------------------------------->
-            <div class="portfolio-modal">
+            <!-- <div class="portfolio-modal">
               <button class="close-modal">
                 <h1>X</h1>
               </button>
@@ -169,10 +229,14 @@
                 <p class="light-text">
                   I wanted a quiz application to support my learning but
                   couldn't find one to suit my needs, so I created my own. A key
-                  feature was to be able to type answers and self-score. Using
-                  state I render the answer modals based on truthy/falsy values
-                  and button click events to switch between question and answer.
-                  Running score which is revealed at the end of the quiz.
+                  feature was to be able to type answers and self-score (I trust
+                  myself!). Using state I render the answer modals based on
+                  truthy/falsy values and use button click events to switch
+                  between question and answer. I added running score which is
+                  revealed at the end of the quiz. I've recently learnt to use
+                  Firebase for authorisation so I'm currently implementing this
+                  so the user can log in and it will re-route the user based on
+                  their credentials.
                 </p>
                 <video width="280" controls>
                   <source src="./images/punkAPI.mp4" type="video/mp4" />
@@ -180,14 +244,13 @@
                   Your browser does not support HTML video.
                 </video>
 
-                <p class="modal__description light-text">....</p>
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
                   href="#"
                 ></a>
               </div>
             </div>
-          </figure>
+          </figure> -->
 
           <!-- PROJECT  -->
           <figure class="portfolio-item">
@@ -273,18 +336,15 @@
               <div class="portfolio-content">
                 <p class="light-text">
                   Create a morse code translator using OOP, designed mobile
-                  first.
+                  first. This was a challenging task, I had to consider the morse to
+                  English input would be different as each "letter" contained
+                  multiple characters.
                 </p>
                 <video width="280" controls>
                   <source src="./images/morseCodeVideo.mp4" type="video/mp4" />
                   <source src="mov_bbb.ogg" type="video/ogg" />
                   Your browser does not support HTML video.
                 </video>
-                <p class="modal__description light-text">
-                  This was a challenging task, I had to consider the morse to
-                  English input would be different as each "letter" contained
-                  multiple characters.
-                </p>
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
                   href="https://github.com/TamzinBoyd/Nology-coursework/tree/main/03-Javascript/Morse-Code-Translator"
@@ -376,18 +436,17 @@
                 </div>
               </div>
               <div class="portfolio-content">
-                <p class="light-text">Create a functional calculator.</p>
+                <p class="light-text">Create a functional calculator. I decided to store the numbers in an array which I looped over
+                  to add event listeners. On the click of a button the number is
+                  stored and displayed to the user. Using substring I was able
+                  to break down the user's input, calculate the sum and return a
+                  total value.</p>
                 <video width="280" controls>
                   <source src="./images/calculatorVideo.mp4" type="video/mp4" />
                   <source src="mov_bbb.ogg" type="video/ogg" />
                   Your browser does not support HTML video.
                 </video>
-                <p class="modal__description light-text">
-                  I decided to store the numbers in an array which I looped over
-                  to add event listeners. On the click of a button the number is
-                  stored and displayed to the user. Using substring I was able
-                  to break down the user's input, calculate the sum and return a
-                  total value.
+                  
                 </p>
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
@@ -428,21 +487,20 @@
               </div>
               <div class="portfolio-content">
                 <p class="light-text">
-                  Personal project to generate a random Pokemon.
-                </p>
-                <video width="280" controls>
-                  <source src="./images/pokedexVideo.mp4" type="video/mp4" />
-                  <source src="mov_bbb.ogg" type="video/ogg" />
-                  Your browser does not support HTML video.
-                </video>
-                <p class="modal__description light-text">
-                  Having learnt about API fetch requests I wanted to utilise
+                  Personal project to generate a random Pokemon. Having learnt about API fetch requests I wanted to utilise
                   these skills to access the public Pokemon API. This meant
                   reading the documentation carefully to determine how to access
                   the values. On each click an API detch it made which returns a
                   random Pokemon and their key statistics. (Having now learnt
                   more I would instead make just one initial API request then
                   manipulate the data locally).
+                </p>
+                <video width="280" controls>
+                  <source src="./images/pokedexVideo.mp4" type="video/mp4" />
+                  <source src="mov_bbb.ogg" type="video/ogg" />
+                  Your browser does not support HTML video.
+                </video>
+                  
                 </p>
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
@@ -483,20 +541,19 @@
               </div>
               <div class="portfolio-content">
                 <p class="light-text">
-                  Personal project to replicate the popular Hangman game.
+                  Personal project to replicate the popular Hangman game.  A fun side project to practise Javascript skills learnt to
+                  date. Used CSS to generate the drawn lines when user guesses
+                  incorrectly. Generate an array of "_" to represent the random
+                  word. For loop to access the 2 arrays. Use a hidden score to
+                  track user's progress and show when they lose. Game is won
+                  when array no longer contains any "_".
                 </p>
                 <video width="280" controls>
                   <source src="./images/hangmanVideo.mp4" type="video/mp4" />
                   <source src="mov_bbb.ogg" type="video/ogg" />
                   Your browser does not support HTML video.
                 </video>
-                <p class="modal__description light-text">
-                  A fun side project to practise Javascript skills learnt to
-                  date. Used CSS to generate the drawn lines when user guesses
-                  incorrectly. Generate an array of "_" to represent the random
-                  word. For loop to access the 2 arrays. Use a hidden score to
-                  track user's progress and show when they lose. Game is won
-                  when array no longer contains any "_".
+                 
                 </p>
                 <a
                   class="fab fa-github-square icon skill-icon light-text"
@@ -524,6 +581,7 @@
             <i class="fab fa-js-square text-dark-mode"></i>
             <i class="fab fa-github text-dark-mode"></i>
             <i class="fab fa-trello text-dark-mode"></i>
+            <i class="fab fa-node-js text-dark-mode"></i>
           </div>
 
           <div class="experience-info">
@@ -551,19 +609,18 @@
                     utilising <span class="bold">Firebase</span> to create
                     databases, authentification and deployment. Unit testing was
                     carried out by Jest, Cypress, Enzyme and React Testing
-                    Library. I also have awareness of TDD, Agile working, Trello
+                    Library. I also have awareness of TDD, Agile working, Figma, Trello
                     and NPM.
                   </p>
                   <p>
                     As part of the course I contributed to a
                     <span class="bold">client project</span>
-                    which was to create a React JS web application in React
-                    which could be used by students and universities to monitor
+                    which was a React JS web application for students and universities to monitor
                     food waste and the environmental impact of their food
                     choices. Something very close ot my heart. I created a
-                    staged form which takes user's input to create a new recipe
-                    and also updated styling on menu components to reflect new
-                    design changes on Figma.
+                    staged form which takes user's input to create a new recipe and stores it in Firestore.
+                    I also updated styling on menu components to reflect 
+                    design changes shown on Figma.
                   </p>
                 </div>
                 <div class="experience-intro__grid__3">
@@ -617,23 +674,10 @@
         ABOUT<span class="dot">.</span>
       </h2>
 
-      <div class="contact">
+      <div class="contact-container">
         <img src="./images/me.png" alt="illustration" class="me" />
-        <div class="contact__links">
-          <i
-            class="far fa-envelope icon contact-icon"
-            href="mailto:tamzinb86@gmail.com"
-          ></i>
-          <i
-            class="fab fa-linkedin icon contact-icon"
-            href="https://www.linkedin.com/in/tamzinboyd/"
-          ></i>
-          <i
-            class="fab fa-github-square icon contact-icon"
-            href="https://github.com/TamzinBoyd"
-          ></i>
-        </div>
-        <footer class="contact__info">
+      
+        <footer class="contact">
           <p class="contact__para text-dark-mode">
             I enjoy bringing creativity to life through clean, semantic code.
             Throughout the past year of Software Development I’ve explored
@@ -647,18 +691,40 @@
           <p class="contact__para text-dark-mode">
             I enjoy<span class="bold"> making beautiful things </span>, whether
             this be websites, art or crafts. In 2020 I set up an Etsy shop
-            selling digital art & poster prints that I've designed. When I’m not
-            making stuff I like riding horses, running and playing games. I’ve
-            always enjoyed the challenge of puzzles.
+            selling digital art & poster prints that I've designed (GingerHareDesigns).
           </p>
+
+          <div class="contact__icons">
+            <img  src="./images/interestHorse.png" alt="horse image"></i>
+            <img  src="./images/interestPaint.png" alt="paintbrush image"></i>
+            <h3 class="contact__icons__text">Things I love</h3>
+            <img  src="./images/interestWalking.png" alt="hiking image"></i>
+            <img  src="./images/interestGames.png" alt="game controller image"></i>
+          </div>
 
           <p class="contact__intouch text-dark-mode">
             If you'd like more info or to have a chat then I’d
             <span class="bold">love</span> for you to get in touch.
           </p>
-          <button class="modal-link text-dark-mode button">
-            <a href="#" class="more-info">View my CV</a>
+          <div class="contact__links">
+            <i
+              class="far fa-envelope icon contact-icon"
+              href="mailto:tamzin_boyd@hotmail.co.uk"
+            ></i>
+            <i
+              class="fab fa-linkedin icon contact-icon"
+              href="https://www.linkedin.com/in/tamzin-boyd-dev/"
+            ></i>
+            <i
+              class="fab fa-github-square icon contact-icon"
+              href="https://github.com/TamzinBoyd"
+            ></i>
+          </div>
+          <div class="contact__cv">
+          <button class="contact__cv__btn text-dark-mode">
+            <a href="images/CV.pdf" download class="more-info">View my CV</a>
           </button>
+                  </div>
         </footer>
       </div>
 

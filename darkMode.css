@@ -48,8 +48,12 @@ html {
 }
 
 .projects.dark,
-.contact.dark {
+.contact-container.dark {
   background-color: #242323;
+}
+
+.contact-icon.dark:hover {
+  color: white;
 }
 
 .subHeading.dark {

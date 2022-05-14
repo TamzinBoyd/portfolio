@@ -312,13 +312,37 @@ figcaption {
   font-size: 0.9em;
 }
 
-.contact {
+.contact-container {
   background-color: #e3e2e2;
   margin-top: -20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contact__para {
+  padding: 25px;
+  text-align: center;
+}
+.contact__icons {
+  width: 100vw;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #101628;
+}
+.contact__icons__text {
+  color: #e3e2e2;
+}
+.contact__intouch {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 10px;
+  margin: 10px 0 10px 0;
 }
 .contact__links {
   display: flex;
@@ -329,16 +353,25 @@ figcaption {
 .contact__info {
   font-size: 1em;
   text-align: center;
-  padding: 10px 30px;
+  padding: 25px;
 }
-.contact__intouch {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1em;
-  padding: 10px 10px;
+.contact__cv {
+  display: flex;
+  flex-direction: center;
 }
-.contact__para {
-  padding: 10px 10px;
+.contact__cv__btn {
+  width: 25%;
+  height: 40px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #101628;
+  margin-bottom: 20px;
+}
+
+.contact__cv__btn:hover {
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  background-color: #fe5541;
 }
 
 .me {
@@ -487,7 +520,7 @@ figcaption {
     width: 100vw;
     height: 300px;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 100px 40px 0 40px;
   }
 
@@ -531,27 +564,12 @@ figcaption {
     min-height: 200px;
   }
 
-  .icon {
-    font-size: 40px;
-    margin: 0 auto;
-  }
-
-  .contact__links {
-    margin-left: -40px;
-  }
-
   .contact__para {
+    padding: 30px 90px 30px 90px;
     font-size: 1.1em;
-    padding: 0px 100px 50px 100px;
   }
-
-  .contact__intouch {
-    font-size: 1.1em;
-    padding-bottom: 20px;
-  }
-
-  .button {
-    font-size: 1.1em;
+  .contact__cv__btn {
     width: 150px;
+    font-size: 1em;
   }
 }

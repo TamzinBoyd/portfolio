@@ -21,8 +21,12 @@
 }
 
 .projects.dark,
-.contact.dark {
+.contact-container.dark {
   background-color: $background-color-dark;
+}
+
+.contact-icon.dark:hover {
+  color: white;
 }
 
 .subHeading.dark {

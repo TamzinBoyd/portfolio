@@ -226,7 +226,6 @@ nav a {
 }
 
 .project-title {
-  // margin-bottom: -10px;
   text-align: center;
 }
 
@@ -308,13 +307,42 @@ figcaption {
 
 // // // Contact section ///////////////////////////////
 
-.contact {
+.contact-container {
   background-color: $grey-color;
   margin-top: -20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contact {
+  &__para {
+    padding: 25px;
+    text-align: center;
+  }
+
+  &__icons {
+    width: 100vw;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+
+    &__text {
+      color: $grey-color;
+    }
+  }
+
+  &__intouch {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 10px;
+    margin: 10px 0 10px 0;
+  }
 
   &__links {
     display: flex;
@@ -326,19 +354,27 @@ figcaption {
   &__info {
     font-size: 1em;
     text-align: center;
-    padding: 10px 30px;
+    padding: 25px;
   }
+  &__cv {
+    display: flex;
+    flex-direction: center;
 
-  &__intouch {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1em;
-    padding: 10px 10px;
+    &__btn {
+      width: 25%;
+      height: 40px;
+      margin: auto;
+      border: none;
+      border-radius: 10px;
+      background-color: $background-color;
+      margin-bottom: 20px;
+    }
   }
+}
 
-  &__para {
-    padding: 10px 10px;
-  }
+.contact__cv__btn:hover {
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  background-color: $pink-color;
 }
 
 .me {
@@ -492,7 +528,7 @@ figcaption {
     width: 100vw;
     height: 300px;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     padding: 100px 40px 0 40px;
   }
@@ -542,24 +578,14 @@ figcaption {
     min-height: 200px;
   }
 
-  .icon {
-    font-size: 40px;
-    margin: 0 auto;
-  }
-  .contact__links {
-    margin-left: -40px;
-  }
-  .contact__para {
-    font-size: 1.1em;
-    padding: 0px 100px 50px 100px;
-  }
-  .contact__intouch {
-    font-size: 1.1em;
-    padding-bottom: 20px;
-  }
-
-  .button {
-    font-size: 1.1em;
-    width: 150px;
+  .contact {
+    &__para {
+      padding: 30px 90px 30px 90px;
+      font-size: 1.1em;
+    }
+    &__cv__btn {
+      width: 150px;
+      font-size: 1em;
+    }
   }
 }
