@@ -1,6 +1,16 @@
 "use strict";
 
-var portfolioContainer = document.querySelector(".portfolio-items");
+var portfolioContainer = document.querySelector(".portfolio-items"); // modal click event listener was interferring with clicks, so created a click event on the button, which opens a new window witht he link based on the value of the href
+
+var gitHubLink = document.querySelectorAll(".code-link");
+
+for (var i = 0; i < gitHubLink.length; i++) {
+  gitHubLink[i].addEventListener("click", function (e) {
+    console.log("hell");
+    window.open(e.target.getAttribute("value"));
+  });
+}
+
 portfolioContainer.addEventListener("click", function (e) {
   e.preventDefault(); // saving target of the click, and take the closest link to the click
 

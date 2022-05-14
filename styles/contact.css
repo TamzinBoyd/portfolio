@@ -1,0 +1,86 @@
+.contact-container {
+  background-color: #e3e2e2;
+  margin-top: -20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #101628;
+}
+
+.contact__para {
+  padding: 25px;
+  text-align: center;
+}
+.contact__icons {
+  width: 100vw;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #101628;
+}
+.contact__icons__text {
+  color: #e3e2e2;
+}
+.contact__intouch {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 10px;
+  margin: 10px 0 10px 0;
+}
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.contact__info {
+  font-size: 1em;
+  text-align: center;
+  padding: 25px;
+}
+.contact__cv {
+  display: flex;
+  flex-direction: center;
+}
+.contact__cv__btn {
+  width: 25%;
+  height: 40px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #101628;
+  margin-bottom: 20px;
+}
+
+.contact__links > a {
+  text-decoration: none;
+  color: #fe5541;
+}
+
+.contact__links > a :hover {
+  color: #101628;
+}
+
+.contact__cv__btn:hover {
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  background-color: #fe5541;
+}
+
+.me {
+  max-width: 100px;
+  margin-top: 50px;
+}
+
+.icon {
+  font-size: 1.9em;
+  padding: 5px;
+}
+
+.icon:hover {
+  color: #fe5541;
+}

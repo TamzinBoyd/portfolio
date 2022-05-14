@@ -1,0 +1,60 @@
+@import "./_variables.scss";
+@import "./nav.scss";
+
+@import "./headings.scss";
+@import "./projects.scss";
+@import "./experience.scss";
+@import "./contact.scss";
+@import "./modal.scss";
+@import "./darkMode.scss";
+
+@import "./mediaQuery.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+i:hover {
+  cursor: pointer;
+}
+.light-text {
+  color: $grey-color;
+}
+
+.bold {
+  color: $pink-color;
+}
+
+// style scroll bar
+*::-webkit-scrollbar {
+  width: 15px;
+}
+*::-webkit-scrollbar-track {
+  background: $grey-color;
+}
+*::-webkit-scrollbar-thumb {
+  background: $background-color;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: $background-color;
+}
+
+header {
+  background-color: $grey-color;
+  text-align: center;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}

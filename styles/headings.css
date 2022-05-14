@@ -1,0 +1,38 @@
+.welcome {
+  padding-top: 200px;
+  font-size: 5.5em;
+  display: flex;
+  color: #101628;
+}
+.welcome__hi {
+  margin-left: 30px;
+}
+.welcome__job {
+  margin-left: 35px;
+  font-size: 1.5em;
+}
+
+.welcome__info {
+  margin-left: 35px;
+  padding-top: 10px;
+  font-size: 1.2em;
+  margin-bottom: 250px;
+  color: #101628;
+}
+
+.subHeading {
+  color: #101628;
+  position: absolute;
+  font-size: 3.2em;
+  font-weight: 900;
+  margin-left: 30px;
+  margin-top: -40px;
+}
+
+.subContact {
+  margin-top: -60px;
+}
+
+.dot {
+  color: #fe5541;
+}

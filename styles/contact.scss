@@ -1,0 +1,96 @@
+@import "./_variables.scss";
+
+.contact-container {
+  background-color: $grey-color;
+  margin-top: -20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $background-color;
+}
+
+.contact {
+  &__para {
+    padding: 25px;
+    text-align: center;
+  }
+
+  &__icons {
+    width: 100vw;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+
+    &__text {
+      color: $grey-color;
+    }
+  }
+
+  &__intouch {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 10px;
+    margin: 10px 0 10px 0;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    text-decoration: none;
+  }
+
+  &__info {
+    font-size: 1em;
+    text-align: center;
+    padding: 25px;
+  }
+  &__cv {
+    display: flex;
+    flex-direction: center;
+
+    &__btn {
+      width: 25%;
+      height: 40px;
+      margin: auto;
+      border: none;
+      border-radius: 10px;
+      background-color: $background-color;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contact__links > a {
+  text-decoration: none;
+  color: $pink-color;
+}
+
+.contact__links > a :hover {
+  color: $background-color;
+}
+
+.contact__cv__btn:hover {
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  background-color: $pink-color;
+}
+
+.me {
+  max-width: 100px;
+  margin-top: 50px;
+}
+
+.icon {
+  font-size: 1.9em;
+  padding: 5px;
+}
+
+.icon:hover {
+  color: $pink-color;
+}

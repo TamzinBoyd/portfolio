@@ -1,0 +1,119 @@
+@import "./_variables.scss";
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggler {
+  margin-right: 20%;
+  font-size: 1.4em;
+  color: $background-color;
+}
+
+.logo {
+  margin: 0;
+  padding: 10px;
+  max-height: 4em;
+}
+
+// Hamburger menu
+// hide checklist box
+.nav-toggle {
+  display: none;
+}
+
+.desktop-titles {
+  // hide desktop links
+  display: none;
+}
+
+.nav-toggle-label {
+  // position of hambuger
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+// creating the 3 lines */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  // /* this code creates 3 lines
+  display: block;
+  background-color: $background-color;
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label.dark span,
+.nav-toggle-label.dark span::before,
+.nav-toggle-label.dark span::after {
+  background-color: $pink-color;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  /* this will change it to no content so just have the lines */
+  content: " ";
+  position: absolute;
+}
+
+// reates top & bottom lines
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  // pop out list styling
+  background-color: $grey-color;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+
+  //   // /* settings so it only appears when select the 3 lines */
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  overflow-x: hidden;
+}
+
+nav ul {
+  list-style: none;
+  padding: 15px;
+}
+
+nav li {
+  margin-bottom: 0.5em;
+}
+
+nav a {
+  // further stylijng to links
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  // /* so invisible until check box & they fade in */
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+/* below will display the NAV only of the checked box is ticked */
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}

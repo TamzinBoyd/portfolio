@@ -1,42 +1,5 @@
-@import "./_base.scss";
-@import "./modal.css";
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-i:hover {
-  cursor: pointer;
-}
-.light-text {
-  color: $grey-color;
-}
-
-.bold {
-  color: $pink-color;
-}
-
-*::-webkit-scrollbar {
-  width: 15px;
-}
-*::-webkit-scrollbar-track {
-  background: $grey-color;
-}
-*::-webkit-scrollbar-thumb {
-  background: $background-color;
-  border-radius: 10px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background: $background-color;
-}
-// nav  //////////////////////////////////////////////////////////////
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -46,7 +9,7 @@ i:hover {
 #theme-toggler {
   margin-right: 20%;
   font-size: 1.4em;
-  color: $background-color;
+  color: #101628;
 }
 
 .logo {
@@ -55,19 +18,15 @@ i:hover {
   max-height: 4em;
 }
 
-// Hamburger menu
-// hide checklist box
 .nav-toggle {
   display: none;
 }
 
 .desktop-titles {
-  // hide desktop links
   display: none;
 }
 
 .nav-toggle-label {
-  // position of hambuger
   position: absolute;
   top: 0;
   right: 0;
@@ -77,13 +36,11 @@ i:hover {
   align-items: center;
 }
 
-// creating the 3 lines */
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  // /* this code creates 3 lines
   display: block;
-  background-color: $background-color;
+  background-color: #101628;
   height: 3px;
   width: 2em;
   border-radius: 2px;
@@ -93,7 +50,7 @@ i:hover {
 .nav-toggle-label.dark span,
 .nav-toggle-label.dark span::before,
 .nav-toggle-label.dark span::after {
-  background-color: $pink-color;
+  background-color: #fe5541;
 }
 
 .nav-toggle-label span::before,
@@ -103,7 +60,6 @@ i:hover {
   position: absolute;
 }
 
-// reates top & bottom lines
 .nav-toggle-label span::before {
   bottom: 7px;
 }
@@ -113,14 +69,11 @@ i:hover {
 }
 
 nav {
-  // pop out list styling
-  background-color: $grey-color;
+  background-color: #e3e2e2;
   position: absolute;
   text-align: right;
   top: 100%;
   right: 0;
-
-  //   // /* settings so it only appears when select the 3 lines */
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -137,11 +90,9 @@ nav li {
 }
 
 nav a {
-  // further stylijng to links
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
-  // /* so invisible until check box & they fade in */
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
@@ -156,20 +107,18 @@ nav a {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-// // HEADING /////////////////////////////////////////////
 .welcome {
   padding-top: 200px;
   font-size: 5.5em;
   display: flex;
-
-  &__hi {
-    margin-left: 30px;
-  }
-
-  &__job {
-    margin-left: 35px;
-    font-size: 1.5em;
-  }
+  color: #101628;
+}
+.welcome__hi {
+  margin-left: 30px;
+}
+.welcome__job {
+  margin-left: 35px;
+  font-size: 1.5em;
 }
 
 .welcome__info {
@@ -177,11 +126,11 @@ nav a {
   padding-top: 10px;
   font-size: 1.2em;
   margin-bottom: 250px;
+  color: #101628;
 }
 
-// // SUB-HEADINGS ///////////
-
 .subHeading {
+  color: #101628;
   position: absolute;
   font-size: 3.2em;
   font-weight: 900;
@@ -192,11 +141,15 @@ nav a {
 .subContact {
   margin-top: -60px;
 }
-// // PROJECTS /////////////////////////////////////////
+
+.dot {
+  color: #fe5541;
+}
 
 .projects {
-  background-color: $grey-color;
+  background-color: #e3e2e2;
   padding-bottom: 100px;
+  color: #101628;
 }
 
 .projects__description {
@@ -235,27 +188,28 @@ nav a {
   margin: auto;
   border: none;
   border-radius: 10px;
-  background-color: $background-color;
+  background-color: #101628;
 }
 
 .button:hover {
   box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
-  background-color: $pink-color;
+  background-color: #fe5541;
 }
+
 .more-info {
-  color: $grey-color;
+  color: #e3e2e2;
   text-decoration: none;
 }
 
 figcaption {
   display: flex;
+  width: 70%;
 }
-
-//  Experience section //////////////////////////////
 
 .experience {
   background-color: white;
   padding-bottom: 100px;
+  color: #101628;
 }
 
 .experience-container > i {
@@ -285,18 +239,15 @@ figcaption {
   padding: 30px;
   text-align: center;
   font-size: 0.9em;
-
-  &__1 {
-    padding-bottom: 15px;
-  }
-
-  &__2 {
-    padding-bottom: 15px;
-  }
-
-  &__3 {
-    padding-bottom: 15px;
-  }
+}
+.experience-intro__grid__1 {
+  padding-bottom: 15px;
+}
+.experience-intro__grid__2 {
+  padding-bottom: 15px;
+}
+.experience-intro__grid__3 {
+  padding-bottom: 15px;
 }
 
 .experience-intro__para3 {
@@ -305,76 +256,77 @@ figcaption {
   font-size: 0.9em;
 }
 
-// // // Contact section ///////////////////////////////
-
 .contact-container {
-  background-color: $grey-color;
+  background-color: #e3e2e2;
   margin-top: -20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #101628;
 }
 
-.contact {
-  &__para {
-    padding: 25px;
-    text-align: center;
-  }
+.contact__para {
+  padding: 25px;
+  text-align: center;
+}
+.contact__icons {
+  width: 100vw;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #101628;
+}
+.contact__icons__text {
+  color: #e3e2e2;
+}
+.contact__intouch {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 10px;
+  margin: 10px 0 10px 0;
+}
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.contact__info {
+  font-size: 1em;
+  text-align: center;
+  padding: 25px;
+}
+.contact__cv {
+  display: flex;
+  flex-direction: center;
+}
+.contact__cv__btn {
+  width: 25%;
+  height: 40px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #101628;
+  margin-bottom: 20px;
+}
 
-  &__icons {
-    width: 100vw;
-    margin-top: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $background-color;
+.contact__links > a {
+  text-decoration: none;
+  color: #fe5541;
+}
 
-    &__text {
-      color: $grey-color;
-    }
-  }
-
-  &__intouch {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1em;
-    padding: 10px 10px;
-    margin: 10px 0 10px 0;
-  }
-
-  &__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px;
-  }
-
-  &__info {
-    font-size: 1em;
-    text-align: center;
-    padding: 25px;
-  }
-  &__cv {
-    display: flex;
-    flex-direction: center;
-
-    &__btn {
-      width: 25%;
-      height: 40px;
-      margin: auto;
-      border: none;
-      border-radius: 10px;
-      background-color: $background-color;
-      margin-bottom: 20px;
-    }
-  }
+.contact__links > a:hover {
+  color: #101628;
 }
 
 .contact__cv__btn:hover {
   box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
-  background-color: $pink-color;
+  background-color: #fe5541;
 }
 
 .me {
@@ -388,15 +340,159 @@ figcaption {
 }
 
 .icon:hover {
-  color: $pink-color;
+  color: #fe5541;
 }
 
-// // // desktop ////////////////////////////////////////////////////////////////////////////////////////////////
+.modal__description {
+  margin-top: 10px;
+}
+
+.portfolio-modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  background: #101628;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.portfolio-modal.is-open {
+  display: block;
+}
+
+.project-title {
+  font-size: 1.5em;
+  color: #fe5541;
+  padding-bottom: 10px;
+}
+
+.portfolio-subtitle {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.portfolio-content > p {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.code-link-btn {
+  width: 110px;
+  height: 40px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #fe5541;
+  margin-bottom: 20px;
+}
+
+.code-link-btn > a {
+  text-decoration: none;
+  color: #e3e2e2;
+}
+
+.code-link-btn:hover {
+  background-color: #101628;
+  border: 2px solid #fe5541;
+}
+
+.close-modal {
+  background: #fe5541;
+  cursor: pointer;
+  position: fixed;
+  right: 2.9em;
+  top: 2.9em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  padding: 2px;
+  border: none;
+}
+
+.close-modal > h1 {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: white;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.nav-container.dark,
+.nav.dark {
+  background-color: #242323;
+}
+
+#theme-toggler.dark,
+.contact-icon.dark,
+.bold.dark {
+  color: #fe5541;
+}
+
+.main.dark,
+.experience.dark,
+.modal.dark {
+  background-color: #101628;
+}
+
+.text-dark-mode.dark {
+  color: #e3e2e2;
+}
+
+.projects.dark,
+.contact-container.dark {
+  background-color: #242323;
+}
+
+.contact-icon.dark:hover {
+  color: white;
+}
+
+.subHeading.dark {
+  color: #e3e2e2;
+}
+
+.nav__links.dark {
+  color: #e3e2e2;
+}
+
+.nav__links.dark:hover {
+  color: #fe5541;
+}
+
+.mobile-list.dark:hover {
+  color: #fe5541;
+}
 
 @media screen and (min-width: 568px) {
-  // hide hamburger menu
   .nav-toggle,
-  .nav-toggle-label {
+.nav-toggle-label {
     display: none;
     opacity: 1;
   }
@@ -404,12 +500,13 @@ figcaption {
   #theme-toggler {
     margin-right: 2%;
     font-size: 1.4em;
-    color: $background-color;
+    color: #101628;
   }
 
   header {
     overflow-y: hidden;
   }
+
   .desktop-titles {
     float: right;
     width: 300px;
@@ -427,18 +524,16 @@ figcaption {
 
   .nav__links {
     text-decoration: none;
-    color: $background-color;
+    color: #101628;
   }
 
   .nav__links:hover {
-    color: $pink-color;
+    color: #fe5541;
   }
 
   .mode-toggle {
     margin-right: 2%;
   }
-
-  //   // welcome section ////////////////
 
   .welcome__hi {
     font-size: 200px;
@@ -453,12 +548,11 @@ figcaption {
   .dot {
     font-size: 150px;
   }
+
   .welcome__job,
-  .welcome__info {
+.welcome__info {
     margin-left: 110px;
   }
-
-  //   // projects /////////////////////////
 
   .subHeading {
     font-size: 5em;
@@ -476,7 +570,7 @@ figcaption {
   }
 
   .projects__description,
-  .projects__description2 {
+.projects__description2 {
     padding: 20px 110px 0 110px;
     font-size: 1.2em;
   }
@@ -498,8 +592,8 @@ figcaption {
     display: flex;
     align-items: center;
   }
+
   .project-image {
-    // height: 1000px;
     width: 210px;
   }
 
@@ -518,18 +612,22 @@ figcaption {
 
   .portfolio-content > video {
     padding: 30px 0px;
+    min-width: 500px;
   }
-  //   //  experience ///////////////
+
+  .portfolio-modal {
+    padding: 30px 100px 30px 100px;
+  }
 
   .experience {
     padding-bottom: 200px;
   }
+
   .icon-grid {
     width: 100vw;
     height: 300px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
     padding: 100px 40px 0 40px;
   }
 
@@ -543,24 +641,21 @@ figcaption {
     padding: 0 110px 0 110px;
     gap: 50px;
     font-size: 1.1em;
-
-    &__1 {
-      grid-column: 1/3;
-      grid-row: 1/2;
-      font-weight: 700;
-    }
-
-    &__2 {
-      grid-column: 1/3;
-      grid-row: 2/3;
-      font-weight: 700;
-    }
-
-    &__3 {
-      grid-column: 3/4;
-      grid-row: 1/4;
-      font-weight: 400;
-    }
+  }
+  .experience-intro__grid__1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-weight: 700;
+  }
+  .experience-intro__grid__2 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-weight: 700;
+  }
+  .experience-intro__grid__3 {
+    grid-column: 3/4;
+    grid-row: 1/4;
+    font-weight: 400;
   }
 
   .experience-intro__para3 {
@@ -569,8 +664,6 @@ figcaption {
     font-size: 1.1em;
   }
 
-  //   //// contact section ////////////////////
-
   .me {
     margin-left: -45px;
     margin-top: -70px;
@@ -578,14 +671,60 @@ figcaption {
     min-height: 200px;
   }
 
-  .contact {
-    &__para {
-      padding: 30px 90px 30px 90px;
-      font-size: 1.1em;
-    }
-    &__cv__btn {
-      width: 150px;
-      font-size: 1em;
-    }
+  .contact__para {
+    padding: 30px 90px 30px 90px;
+    font-size: 1.1em;
   }
+  .contact__cv__btn {
+    width: 150px;
+    font-size: 1em;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.light-text {
+  color: #e3e2e2;
+}
+
+.bold {
+  color: #fe5541;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e3e2e2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #101628;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #101628;
+}
+
+header {
+  background-color: #e3e2e2;
+  text-align: center;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
