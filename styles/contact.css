@@ -9,13 +9,13 @@
 }
 
 .contact__para {
-  padding: 25px;
+  padding: 30px;
   text-align: center;
 }
 .contact__icons {
   width: 100vw;
   margin-top: 10px;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +28,7 @@
   text-align: center;
   font-weight: 700;
   font-size: 1em;
-  padding: 10px 10px;
-  margin: 10px 0 10px 0;
+  padding: 15px 30px 10px 30px;
 }
 .contact__links {
   display: flex;
@@ -37,11 +36,6 @@
   align-items: center;
   padding: 10px 10px;
   text-decoration: none;
-}
-.contact__info {
-  font-size: 1em;
-  text-align: center;
-  padding: 25px;
 }
 .contact__cv {
   display: flex;
@@ -57,12 +51,14 @@
   margin-bottom: 20px;
 }
 
-.contact__links > a {
+.contact-icon {
   text-decoration: none;
   color: #fe5541;
+  font-size: 1.9em;
+  padding: 7px;
 }
 
-.contact__links > a :hover {
+.contact-icon:hover {
   color: #101628;
 }
 
@@ -74,13 +70,4 @@
 .me {
   max-width: 100px;
   margin-top: 50px;
-}
-
-.icon {
-  font-size: 1.9em;
-  padding: 5px;
-}
-
-.icon:hover {
-  color: #fe5541;
 }

@@ -1,23 +1,23 @@
 @import "./_variables.scss";
 .projects {
   background-color: $grey-color;
-  padding-bottom: 100px;
+  padding-bottom: $heading-margin-mobile;
   color: $background-color;
 }
 
 .projects__description {
-  padding: 70px 20px 20px 20px;
+  padding: $heading-margin-mobile $section-padding-mobile 0
+    $section-padding-mobile;
 }
 
 .projects__description2 {
-  padding: 10px 20px 0px 20px;
+  padding: 20px $section-padding-mobile 30px $section-padding-mobile;
 }
 
 .portfolio-items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 }
 
 .portfolio-item {

@@ -5,18 +5,17 @@
 }
 
 .projects__description {
-  padding: 70px 20px 20px 20px;
+  padding: 100px 30px 0 30px;
 }
 
 .projects__description2 {
-  padding: 10px 20px 0px 20px;
+  padding: 20px 30px 30px 30px;
 }
 
 .portfolio-items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 }
 
 .portfolio-item {

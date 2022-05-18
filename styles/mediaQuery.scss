@@ -19,7 +19,7 @@
   }
   .desktop-titles {
     float: right;
-    width: 300px;
+    width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,7 +29,7 @@
 
   .desktop-titles > li {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 1.3em;
   }
 
   .nav__links {
@@ -48,9 +48,9 @@
   //   // welcome section ////////////////
 
   .welcome__hi {
-    font-size: 200px;
+    font-size: 2.5em;
     margin-top: 80px;
-    margin-left: 100px;
+    margin-left: $heading-margin;
   }
 
   .welcome__dot {
@@ -62,14 +62,14 @@
   }
   .welcome__job,
   .welcome__info {
-    margin-left: 110px;
+    margin-left: $heading-margin;
   }
 
   //   // projects /////////////////////////
 
   .subHeading {
     font-size: 5em;
-    margin-left: 100px;
+    margin-left: $heading-margin;
     margin-top: -115px;
   }
 
@@ -84,17 +84,18 @@
 
   .projects__description,
   .projects__description2 {
-    padding: 20px 110px 0 110px;
-    font-size: 1.2em;
+    padding: 20px $text-paragraph-padding 0 $text-paragraph-padding;
+    font-size: $text-paragraph-size;
+    text-align: center;
   }
 
   .projects__description {
-    padding-top: 120px;
+    padding-top: $section-padding;
   }
 
   .portfolio-items {
     display: grid;
-    padding: 0 50px 0 50px;
+    padding: 0 $section-padding 0 $section-padding;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     padding-top: 60px;
@@ -106,7 +107,6 @@
     align-items: center;
   }
   .project-image {
-    // height: 1000px;
     width: 210px;
   }
 
@@ -138,24 +138,22 @@
     padding-bottom: 200px;
   }
   .icon-grid {
-    width: 100vw;
+    width: 80vw;
     height: 300px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    padding: 100px 40px 0 40px;
+    padding: $section-padding $heading-margin $section-padding $heading-margin;
   }
 
   .experience-intro__grid {
     width: 100vw;
-    height: 300px;
+    height: 380px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    font-size: 20px;
-    padding: 0 110px 0 110px;
-    gap: 50px;
-    font-size: 1.1em;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    font-size: $text-paragraph-size;
+    padding: 0 $text-paragraph-padding 0 $text-paragraph-padding;
+    gap: 30px;
 
     &__1 {
       grid-column: 1/3;
@@ -171,15 +169,15 @@
 
     &__3 {
       grid-column: 3/4;
-      grid-row: 1/4;
+      grid-row: 1/3;
       font-weight: 400;
     }
   }
 
   .experience-intro__para3 {
-    padding: 30px 90px 0 90px;
+    padding: 0px $text-paragraph-padding 0 $text-paragraph-padding;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: $text-paragraph-size;
   }
 
   //   //// contact section ////////////////////
@@ -193,12 +191,20 @@
 
   .contact {
     &__para {
-      padding: 30px 90px 30px 90px;
-      font-size: 1.1em;
+      padding: 30px $text-paragraph-padding 20px $text-paragraph-padding;
+      font-size: $text-paragraph-size;
     }
     &__cv__btn {
       width: 150px;
-      font-size: 1em;
+      font-size: $text-paragraph-size;
+    }
+
+    &__icons {
+      margin-top: 30px;
+    }
+
+    &__intouch {
+      margin-top: 30px;
     }
   }
 }
